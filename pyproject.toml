@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "poetry_dev"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "^2.25.1"
+
+[tool.poetry.dev-dependencies]
+toml = "^0.10.2"
+
+[path-dependencies]
+requests = "./libs/requests"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

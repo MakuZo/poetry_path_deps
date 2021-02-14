@@ -1,0 +1,18 @@
+version: "3.6"
+
+services: 
+  dev:
+    build: 
+      context: .
+      args:
+        INSTALL_DEV: "true"
+    command: "python -c 'import requests; print(requests)'"
+    volumes:
+      - "./scripts/:/app/scripts/"
+      - "./libs/:/app/libs/"
+  staging:
+    build:
+      context: .
+    command: "python -c 'import requests; print(requests)'"
+    volumes:
+      - "./libs/:/app/libs/"
